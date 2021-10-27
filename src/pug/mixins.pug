@@ -1,0 +1,17 @@
+//Text field label
+mixin input(type, name, placeholder, label)
+	.form-group
+		label.label(for=name)= label
+		input.input(type=type, id=name name=name, placeholder=placeholder, 'required')
+
+//Social button in form
+mixin socialButton(href, name, imgurl)
+	//- attributes == {class: "btn"}
+	a.social-buttons__button.social(href=href)
+		img.social-buttons__icon(src=imgurl, alt=name)
+		= name
+
+//Form submit button
+mixin submitButton(text)
+	button.button.submit(type="submit")
+		= text

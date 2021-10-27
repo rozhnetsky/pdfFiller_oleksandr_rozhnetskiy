@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+primary_color = #2e3dbe
+
+//colors palette
+slate-blue-400 = #6683A3
+slate-blue-600 = #45688F
+
+dark-orange-300 = #FF9000
+dark-orange-500 = #FFA42E
+
+trolley-gray-400 = #959595
+trolley-gray-800 = #414141
+
+//styles
+main_bg = primary_color
+base_text_color = trolley-gray-800
+error = #ff0000
+card_bg = #fff
+text_on_dark = #fff
+input_border_default = #aaa
+input_border_error = #E15554
+input_border_hover = #808080
+
+link_color = slate-blue-600
+link_color_hover = slate-blue-400
+
+submit_button_default = dark-orange-500
+submit_button_hover = dark-orange-300
+
+devider_color = #D4D4D4
+
+margin-small = 2rem
+
+media-screen-s = 576px
+
+transition-background = .4s background ease
+
+html, body
+	font-variant-ligatures common-ligatures
+	text-rendering geometricprecision
+	background main_bg
+	color base_text_color
+	font-size 10px
+	font-family 'Open Sans', sans-serif
+
+.link
+	color link_color
+	font-weight 600
+	&:hover 
+		color link_color_hover
+
+.h2
+	font-size 2.4em
+	line-height: 2em;
+	margin-bottom: 2.2rem;
+	font-weight bold
+
+.h3
+	font-size 2em
+	line-height: 1.2em;
+	// margin-bottom: 1rem;
+	font-weight bold
+	
+.logo
+	margin 0 auto
+	align-self center
+	width 12em
+	transform scale(1)
+	transition 0.4s transform ease
+	margin 16px auto
+	@media screen and (min-width: media-screen-s)
+		transform scale(1.25)
+	
+.weather 
+	grid-row-start 3
+	grid-row-end 4
+	display flex
+	align-items center
+	justify-content center
+	&__h3
+		text-align center
+		color text_on_dark
+	
+
+@import "form.styl"

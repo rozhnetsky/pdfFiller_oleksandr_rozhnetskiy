@@ -1,0 +1,45 @@
+include mixins
+
+<!DOCTYPE html>
+
+html(lang="en")
+
+	include header
+
+	body
+
+		.login-form
+
+			img.logo(src="img/airSlate-mono.svg" alt="airSlate logo")
+
+			.login-form__form-wrapper
+
+				.login-form__form-process Please check your Browser Console!
+
+				.login-form__form-container
+
+					.h2.login-form__h2 Log in to airSlate
+
+					form.form(action="#", name="registration")
+						
+						+input('text' ,'email', 'name@email.com', "Email address")
+						+input('password','password', 'Enter password', "Password")
+						.info-text By clicking Log in, you agree to the #[a.link(href="#") Terms of Services] and #[a.link(href="#") Privacy Policy], including receipt of emails from of us about our service.
+
+						+submitButton("Log in")
+
+					.slash-text
+						.slash-text__stroke
+						span or continue with your social accounts
+						.slash-text__stroke
+
+					.social-buttons
+						+socialButton('https://facebook.com', 'Facebook', 'img/facebook-login.svg')
+						+socialButton('https://google.com', 'Google', 'img/google-login.svg')
+						+socialButton('https://apple.com', 'Apple', 'img/apple-login.svg')
+
+			.weather
+				.h3.weather__h3
+
+		include footer
+					
